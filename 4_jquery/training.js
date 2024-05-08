@@ -1,4 +1,5 @@
 let allAuthors = [];
+result = 0;
 const books = [
   {
     title: "The Great Gatsby",
@@ -23,10 +24,34 @@ const books = [
   }
 ];
 // Write a function here
-function getInventory(allAuthors) {
+function getTotal() {
   for(let i=0; i<books.length; i++){
-    allAuthors.push;
-    return allAuthors;
+    result = i+books.length;
+    return "total number of books are: "+result;
   }
 }
-console.log(getInventory(books));
+
+function findNewestBook(books) {
+  let newestBook = null;
+  for (const book of books) {
+    if (!newestBook || book.year > newestBook.year) {
+      newestBook = book;
+    }
+  }
+  return newestBook;
+}
+
+function findOldestBook(books) {
+  let oldestBook = null;
+  for (const book of books) {
+    if (!oldestBook || book.year < oldestBook.year) {
+      oldestBook = book;
+    }
+  }
+  return oldestBook;
+}
+console.log(getTotal());
+const oldestBook = findOldestBook(books);
+console.log("The oldest book is:", oldestBook);
+const newestBook = findNewestBook(books);
+console.log("The newest book is:", newestBook);
