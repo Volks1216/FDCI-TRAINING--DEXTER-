@@ -1,4 +1,6 @@
-let allAuthors = [];
+let allYear = [];
+let allPage = [];
+
 result = 0;
 const books = [
   {
@@ -31,27 +33,32 @@ function getTotal() {
   }
 }
 
-function findNewestBook(books) {
-  let newestBook = null;
-  for (const book of books) {
-    if (!newestBook || book.year > newestBook.year) {
-      newestBook = book;
+function sortToAsc() {
+  for(let i=0; i<books.length; i++){
+    allYear.push(books[i].year);
+    allYear.sort();
     }
+    return console.log("The oldest book found is: "+allYear[0]);
   }
-  return newestBook;
-}
 
-function findOldestBook(books) {
-  let oldestBook = null;
-  for (const book of books) {
-    if (!oldestBook || book.year < oldestBook.year) {
-      oldestBook = book;
+function sortToDsc() {
+  for(let i=0; i<books.length; i++){
+    allYear.push(books[i].year);
+    allYear.sort();
+    allYear.reverse();
     }
+    return console.log("The oldest book found is: "+allYear[0]);
   }
-  return oldestBook;
-}
+
+function totalChapters() {
+  for(let i=0; i<books.length; i++){
+    allPage.push(books[i].pages);
+    result += result+allPage[i]; 
+    }
+    console.log(allPage)
+  }
+
 console.log(getTotal());
-const oldestBook = findOldestBook(books);
-console.log("The oldest book is:", oldestBook);
-const newestBook = findNewestBook(books);
-console.log("The newest book is:", newestBook);
+sortToAsc();
+sortToDsc();
+totalChapters();
