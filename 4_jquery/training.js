@@ -48,7 +48,7 @@ function sortToDsc() {
     allYear.sort();
     allYear.reverse();
     }
-    return console.log("The oldest book found is: "+allYear[0]);
+    return console.log("The newest book found is: "+allYear[0]);
   }
 
 function totalChapters() {
