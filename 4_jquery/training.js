@@ -1,5 +1,6 @@
 let allYear = [];
 let allPage = [];
+let allBook = [];
 
 result = 0;
 const books = [
@@ -53,12 +54,22 @@ function sortToDsc() {
 function totalChapters() {
   for(let i=0; i<books.length; i++){
     allPage.push(books[i].pages);
-    result += result+allPage[i]; 
+    result += allPage[i]; 
     }
-    console.log(allPage)
+    console.log("total number of pages added: "+result)
   }
+
+function showAllBooks() {
+  for(let i=0; i<books.length; i++) {
+    allBook.push(books[i]);
+    result = allBook;
+  }
+  console.log("These are all the books found in the database: ");
+  return console.log(result);
+}
 
 console.log(getTotal());
 sortToAsc();
 sortToDsc();
 totalChapters();
+showAllBooks();
