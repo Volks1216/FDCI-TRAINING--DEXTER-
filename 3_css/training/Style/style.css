@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    max-width: 1920px;
+    margin: 0 auto;
+    width: 100%;
+}
+header{
+    background-color: gray;
+    padding: 15px 15px;
+}
+header h1{
+    color: pink;
+}
+header h1 span{
+    color: orange;
+}
+.wrapper{
+    width: 1280px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+#navigation{
+    position: relative;
+}
+#navigation ul{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#navigation ul li{
+    display: inline;
+}
+#navigation ul li a{
+    padding: 0 5px;
+    font-size: 18px;
+    text-decoration: white;
+    
+}
