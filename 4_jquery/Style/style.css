@@ -1,0 +1,93 @@
+/* style.css */
+
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f8fa;
+    background-image: url("https://i.redd.it/g38817mqb1361.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+
+header {
+    background-color: #24292e;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 24px;
+    margin: 0;
+}
+
+header h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#repoSections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.repoSection {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.repoSection h2 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #24292e;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #24292e;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0366d6;
+}
+
+.repoResult {
+    margin-top: 10px;
+    border: 1px solid #e1e4e8;
+    padding: 10px;
+    display: none;
+    background-color: #fff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+}
+
+th, td {
+    border: 1px solid #e1e4e8;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f6f8fa;
+    font-weight: bold;
+    color: #24292e;
+}

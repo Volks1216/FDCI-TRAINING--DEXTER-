@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Repositories</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <header>
+        <h1><a href="https://github.com/Volks1216?tab=repositories" target="_blank">GitHub Repositories of Volks1216</a></h1>
+    </header>
+    
+    <section id="repoSections">
+        <div class="repoSection">
+            <h2>Show All Repositories</h2>
+            <button id="click">View All Repositories</button>
+            <table id="repoTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Full Name</th>
+                        <th>Node ID</th>
+                        <th>Private</th>
+                        <th>ID</th>
+                    </tr>
+                </thead>
+                <tbody id="aResult"></tbody>
+            </table>
+        </div>
+
+        <div class="repoSection">
+            <h2>Sort by ID</h2>
+            <button id="click5">View Repositories</button>
+            <div id="aResult5" class="repoResult"></div>
+        </div>
+
+        <div class="repoSection">
+            <h2>Sort by Name</h2>
+            <button id="click1">View Repositories</button>
+            <div id="aResult1" class="repoResult"></div>
+        </div>
+
+        <div class="repoSection">
+            <h2>Sort by Full Name</h2>
+            <button id="click2">View Repositories</button>
+            <div id="aResult2" class="repoResult"></div>
+        </div>
+
+        <div class="repoSection">
+            <h2>Sort by Node ID</h2>
+            <button id="click3">View Repositories</button>
+            <div id="aResult3" class="repoResult"></div>
+        </div>
+
+        <div class="repoSection">
+            <h2>Sort by Private</h2>
+            <button id="click4">View Repositories</button>
+            <div id="aResult4" class="repoResult"></div>
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./JS/ajax.js"></script>
+</body>
+</html>
