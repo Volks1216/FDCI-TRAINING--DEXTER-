@@ -35,7 +35,7 @@ $(document).ready(function(){
             for(let i=0; i<results.length; i++){
                 //console.log(results);
                 //$("#aResult").empty();
-                $("#aResult1").append(`Name: ${results[i].name}<br>`);
+                $("#aResult1").append(`Name: ${results[i].name}<br><br>`);
             }
             })
 
@@ -46,7 +46,7 @@ $(document).ready(function(){
             for(let i=0; i<results.length; i++){
                 //console.log(results);
                 //$("#aResult").empty();
-                $("#aResult2").append(`Full Name: ${results[i].full_name}<br>`);
+                $("#aResult2").append(`Full Name: ${results[i].full_name}<br><br>`);
             }
             })
 
@@ -57,7 +57,7 @@ $(document).ready(function(){
             for(let i=0; i<results.length; i++){
                 //console.log(results);
                 //$("#aResult").empty();
-                $("#aResult3").append(`node ID: ${results[i].node_id}<br>`);
+                $("#aResult3").append(`node ID: ${results[i].node_id}<br><br>`);
             }
             })
 
@@ -68,7 +68,7 @@ $(document).ready(function(){
             for(let i=0; i<results.length; i++){
                 //console.log(results);
                 //$("#aResult").empty();
-                $("#aResult4").append(`isPrivate: ${results[i].private}<br>`);
+                $("#aResult4").append(`isPrivate: ${results[i].private}<br><br>`);
             }
             })
 
