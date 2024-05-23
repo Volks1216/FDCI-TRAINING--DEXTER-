@@ -35,7 +35,7 @@ $(document).ready(function(){
             for(let i=0; i<results.length; i++){
                 //console.log(results);
                 //$("#aResult").empty();
-                $("#aResult1").append(`Name: ${results[i].name}<br><br>`);
+                $("#aResult1").append(`Name: ${results[i].name}<br>`);
             }
             })
 
