@@ -114,4 +114,57 @@ RIGHT JOIN
 WHERE
     de.dept_no = 'd001';
 
-/*11.*/
+/*11. */
+SELECT 
+	d.dept_no,
+    d.dept_name,
+    AVG(s.salary)
+
+FROM employees AS e INNER JOIN
+dept_emp AS de ON e.emp_no = de.emp_no LEFT JOIN
+departments AS d ON de.dept_no = d.dept_no LEFT JOIN
+salaries AS s ON e.emp_no = s.emp_no
+
+GROUP BY d.dept_no;
+
+/*12.*/
+SELECT
+	dm.emp_no,
+	e.first_name,
+    e.last_name,
+    t.title
+
+FROM dept_manager AS dm LEFT JOIN
+employees AS e ON dm.emp_no = e.emp_no LEFT JOIN
+titles AS t ON e.emp_no = t.emp_no;
+/*13*/
+SELECT 
+    e1.first_name,
+    e1.last_name,
+    e1.birth_date
+FROM 
+    employees AS e1
+WHERE 
+    EXISTS (
+        SELECT 
+            1
+        FROM 
+            employees AS e2
+        WHERE 
+            e1.emp_no = e2.emp_no 
+            AND MONTH(e1.birth_date) = MONTH(e2.birth_date) 
+            AND DAY(e1.birth_date) = DAY(e2.birth_date)
+    );
+    /*14*/
+    /*15*/
+    SELECT 
+	d.dept_no,
+    d.dept_name,
+    MAX(s.salary)
+
+FROM employees AS e INNER JOIN
+dept_emp AS de ON e.emp_no = de.emp_no LEFT JOIN
+departments AS d ON de.dept_no = d.dept_no LEFT JOIN
+salaries AS s ON e.emp_no = s.emp_no
+
+GROUP BY d.dept_no;
